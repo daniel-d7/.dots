@@ -119,20 +119,20 @@ in
     #console.font = "ter-v32b";
     #console.packages = with pkgs; [ terminus_font ];
 
-    hardware = {
-      pulseaudio.enable = false;
-      opengl.extraPackages = with pkgs; [
-        intel-compute-runtime
-        intel-media-driver
-        vaapiIntel
-      ];
-    };
+    #hardware = {
+    #  pulseaudio.enable = false;
+    #  opengl.extraPackages = with pkgs; [
+    #    intel-compute-runtime
+    #    intel-media-driver
+    #    vaapiIntel
+    #  ];
+    #};
 
     # virtualisation
-    virtualisation = {
-      podman.enable = true;
-      libvirtd.enable = true;
-    };
+    #virtualisation = {
+    #  podman.enable = true;
+    #  libvirtd.enable = true;
+    #};
 
     security.pam.services.swaylock = { };
     security.pam.services.gtklock = { };

@@ -73,15 +73,6 @@
       # system configurations
       # desktop
       nixosConfigurations = {
-        ${vars.desktop} = lib.nixosSystem {
-          inherit system;
-          specialArgs = { inherit inputs; };
-          modules = [
-            ./hosts/desktop/configuration-desktop.nix
-            inputs.nixvim.nixosModules.nixvim
-          ];
-        };
-
         # laptop
         ${vars.laptop} = lib.nixosSystem {
           inherit system;
@@ -94,17 +85,6 @@
       };
 
       # home configurations
-      # desktop
-      homeConfigurations = {
-        ${vars.desktop} = home-manager.lib.homeManagerConfiguration {
-          extraSpecialArgs = { inherit inputs; };
-          inherit pkgs;
-          modules = [
-            ./hosts/desktop/home-desktop.nix
-          ];
-        };
-      };
-
       # laptop
       homeConfigurations = {
         ${vars.laptop} = home-manager.lib.homeManagerConfiguration {

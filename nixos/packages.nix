@@ -191,7 +191,7 @@
     wireguard-tools
     wireguard-go
     networkmanagerapplet
-    intel-gpu-tools
+    #intel-gpu-tools
     usbutils
     btop
     stress-ng
